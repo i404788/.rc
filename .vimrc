@@ -10,6 +10,8 @@ Plug 'sbdchd/neoformat'
 Plug 'maralla/completor.vim'
 Plug 'zchee/deoplete-clang'
 Plug 'neomake/neomake'
+Plug 'itchyny/lightline.vim'
+Plug 'kaicataldo/material.vim'
 call plug#end()
 
 
@@ -46,3 +48,9 @@ nnoremap gr :call Rnvar()<Enter>
 nnoremap pf :Neoformat<Enter>
 
 set number
+
+set termguicolors
+
+let g:material_terminal_italics = 1
+let g:material_theme_style = 'default'
+colorscheme material
