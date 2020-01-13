@@ -8,6 +8,6 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 
 mkdir -p ~/.config/nvim
 rm -f ~/.config/nvim/init.vim
-ln -s ./.vimrc ~/.config/nvim/init.vim
+ln -s $(pwd)/.vimrc ~/.config/nvim/init.vim
 
 echo "Go into 'nvim', type ':PlugInstal'"
