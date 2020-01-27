@@ -12,6 +12,7 @@ Plug 'zchee/deoplete-clang'
 Plug 'neomake/neomake'
 Plug 'itchyny/lightline.vim'
 Plug 'kaicataldo/material.vim'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 
