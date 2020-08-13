@@ -10,6 +10,7 @@ Plug 'sbdchd/neoformat'
 Plug 'maralla/completor.vim'
 Plug 'zchee/deoplete-clang'
 Plug 'neomake/neomake'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 
