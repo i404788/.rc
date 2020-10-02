@@ -2,6 +2,8 @@ imap <F6> <Esc>:tabp<Enter>I
 imap <F7> <Esc>:tabn<Enter>I
 nmap <F6> <Esc>:tabp<Enter>
 nmap <F7> <Esc>:tabn<Enter>
+tnoremap <Esc> <C-\><C-n>
+
 set mouse=a
 
 
