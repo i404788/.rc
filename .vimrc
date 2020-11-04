@@ -6,7 +6,6 @@ tnoremap <Esc> <C-\><C-n>
 
 set mouse=a
 
-
 call plug#begin()
 Plug 'sbdchd/neoformat'
 Plug 'maralla/completor.vim'
@@ -16,7 +15,6 @@ Plug 'itchyny/lightline.vim'
 Plug 'kaicataldo/material.vim'
 Plug 'tpope/vim-fugitive'
 call plug#end()
-
 
 function! Tab_Or_Complete() abort
   " If completor is already open the `tab` cycles through suggested completions.
@@ -39,7 +37,6 @@ inoremap <expr> <Tab> Tab_Or_Complete()
 let g:deoplete#sources#clang#libclang_path='/usr/local/Cellar/llvm/8.0.1/lib/libclang.dylib'
 let g:deoplete#sources#clang#clang_header='/usr/local/Cellar/llvm/8.0.1/lib/clang/8.0.1'
 
-
 function! Rnvar()
   let word_to_replace = expand("<cword>")
   let replacement = input("new name: ")
@@ -47,11 +44,27 @@ function! Rnvar()
 endfunction
 
 nnoremap gr :call Rnvar()<Enter> 
-
 nnoremap pf :Neoformat<Enter>
 
-set number
+function! UseTabs()
+  set tabstop=4     " Size of a hard tabstop (ts).
+  set shiftwidth=4  " Size of an indentation (sw).
+  set noexpandtab   " Always uses tabs instead of space characters (noet).
+  set autoindent    " Copy indent from current line when starting a new line (ai).
+endfunction
 
+function! UseSpaces()
+  set tabstop=2     " Size of a hard tabstop (ts).
+  set shiftwidth=2  " Size of an indentation (sw).
+  set expandtab     " Always uses spaces instead of tab characters (et).
+  set softtabstop=0 " Number of spaces a <Tab> counts for. When 0, featuer is off (sts).
+  set autoindent    " Copy indent from current line when starting a new line.
+  set smarttab      " Inserts blanks on a <Tab> key (as per sw, ts and sts).
+endfunction
+
+au! BufNewFile,BufRead *.vue,*.js call UseSpaces()
+
+set number
 set termguicolors
 
 let g:material_terminal_italics = 1
