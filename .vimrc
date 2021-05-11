@@ -34,8 +34,8 @@ endfunction
 let g:completor_auto_trigger = 1
 inoremap <expr> <Tab> Tab_Or_Complete()
 
-let g:deoplete#sources#clang#libclang_path='/usr/local/Cellar/llvm/8.0.1/lib/libclang.dylib'
-let g:deoplete#sources#clang#clang_header='/usr/local/Cellar/llvm/8.0.1/lib/clang/8.0.1'
+let g:deoplete#sources#clang#libclang_path='/usr/lib/libclang.so.11'
+let g:deoplete#sources#clang#clang_header='/usr/lib/clang/11.0.0/include/'
 
 function! Rnvar()
   let word_to_replace = expand("<cword>")
