@@ -4,10 +4,10 @@ nmap <F6> <Esc>:tabp<Enter>
 nmap <F7> <Esc>:tabn<Enter>
 tnoremap <Esc> <C-\><C-n>
 
-nmap <silent> <C-Up> :wincmd k<CR>
-nmap <silent> <C-Down> :wincmd j<CR>
-nmap <silent> <C-Left> :wincmd h<CR>
-nmap <silent> <C-Right> :wincmd l<CR>
+nmap <C-Up> :wincmd k<CR>
+nmap <C-Down> :wincmd j<CR>
+nmap <C-Left> :wincmd h<CR>
+nmap <C-Right> :wincmd l<CR>
 
 nnoremap <leader>S :lua require('spectre').open()<CR>
 
@@ -18,6 +18,7 @@ vnoremap <leader>s :lua require('spectre').open_visual()<CR>
 nnoremap <leader>sp viw:lua require('spectre').open_file_search()<cr>
 
 set mouse=a
+"set clipboard^=unnamed,unnamedplus
 
 call plug#begin()
 Plug 'sbdchd/neoformat'
@@ -27,6 +28,7 @@ Plug 'APZelos/blamer.nvim'
 " Plug 'zchee/deoplete-clang'
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " Language server spport 
 Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'} " Typescript/Javascript support
+Plug 'fannheyward/coc-rust-analyzer'
 Plug 'fannheyward/coc-pyright'
 Plug 'neomake/neomake'
 Plug 'itchyny/lightline.vim'
